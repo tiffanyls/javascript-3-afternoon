@@ -178,12 +178,24 @@ fire(index) {
 */
 
 class Machine {
-  constructor(widgets_made_count, wear_and_tear_count, needs_robot) {
+  constructor(widgets_made_count, wear_and_tear_count, needs_reboot) {
     this.widgets_made_count = 0;
     this.wear_and_tear_count = 0;
-    this.needs_robot = false;
+    this.needs_reboot = false;
   }
-  
+  makeWidgets(number) {
+     this.widgets_made_count += number;
+     this.wear_and_tear_count =  Math.floor(this.widgets_made_count/50);
+  }
+  fixMachine () {
+    this.needs_reboot = true;
+  }
+  reboot () { 
+    return  () => {
+      this.wear_and_tear_count -= 10;
+      this.needs_reboot = false;
+    }
+  }
 }
 
 
