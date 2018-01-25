@@ -40,7 +40,11 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  let newArray = [];
+  for(var key in obj) {
+    newArray.push(obj[key])
+  }
+  return newArray.join("");
 }
 
 
@@ -53,7 +57,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10 (obj) {
+  for(var key in obj) {
+    if (obj[key] > 10) {
+      obj[key] = 0;
+    }
+  }
+  return obj;
+}
 
 
 
@@ -65,7 +76,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function double (obj) {
+  for(var key in obj) {
+    obj[key] *= 2;
+  }
+  return obj;
+}
+
+
 
 
 
@@ -79,7 +97,12 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets (obj) {
+  var string = "";
+  for (var key in obj) {
+    
+  }
+}
 
 
 
