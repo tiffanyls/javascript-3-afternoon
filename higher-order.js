@@ -64,7 +64,7 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 //Code Here
-let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+let totalPopulation = populations.reduce((runningTotal, curElement, curIndex, wholeArray) => runningTotal + curElement, 0);
 
 
 
@@ -89,8 +89,8 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
   Use the filter method to return only the monsters that have a CP of over 200.
 */
 
-//Code Here
-let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+//Code Here 
+let myStrongest = monstersInYourPocket.filter((item, index, array) => item.CP >200);
 
 
 
@@ -107,8 +107,7 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
   Use a high order method to get sum of all the order totals
 */
 
-let ordersTotal= orders.map((current, index, array) => (current.price * 1) +  current.tax);
-
+let ordersTotal= orders.map((current, index, array) => current.price * (1 + current.tax));
 
 
 
@@ -127,7 +126,5 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 /*
   Use a high order method to create to get the sum of bobsTotal.
 */
-
-let bobsTotal //Code Here
 
 
