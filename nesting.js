@@ -51,19 +51,17 @@ var employees = [
 */
 
 function employeeUpdater () {
-  for (let var key in obj) {
-    if (employees.firstName=== "Lorie") {
-      department: "HR"
+  for(var i =0; i < employees.length; i++) {
+    if(employees[i].firstName === 'Theo') {
+      employees.splice(i, 1);
     }
-    else if (employees.firstName === "Theo") {
-      delete employees.firstName,
-      delete employees.lastName,
-      delete employees.email,
-      delete employees.department
+    if(employees[i].firstName === 'Lorie') {
+      employees[i].department = "HR";
     }
   }
   return employees;
-}
+ }
+   
 
 
 
@@ -110,8 +108,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
